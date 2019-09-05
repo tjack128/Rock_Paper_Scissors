@@ -1,0 +1,49 @@
+package rps;
+
+import java.util.Scanner;
+
+public class RPS {
+
+    static Scanner scan = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int number = 0, CPU = 0;
+        System.out.println("Rock is 0.");
+        System.out.println("Paper is 1.");
+        System.out.println("Scissors is 2.");
+        System.out.println("");
+        System.out.println("Please enter a number from 0 to 2");
+        number = scan.nextInt();
+        System.out.println("");
+        CPU = (int) (Math.random() * 2);
+
+        if (number == 0 && CPU == 0) {
+            System.out.println("The computer chose Rock. You chose Rock. It is a draw!");
+        }
+        if (number == 0 && CPU == 1) {
+            System.out.println("The computer chose Paper. You chose Rock. YOU LOSE!");
+        }
+        if (number == 0 && CPU == 2) {
+            System.out.println("The computer chose Scissors. You chose Rock. YOU WIN!");
+        }
+        if (number == 1 && CPU == 0) {
+            System.out.println("The computer chose Rock. You chose Paper. YOU WIN!");
+        }
+        if (number == 1 && CPU == 1) {
+            System.out.println("The computer chose Paper. You chose Paper. It is a draw!");
+        }
+        if (number == 1 && CPU == 2) {
+            System.out.println("The computer chose Scissors. You chose Paper. YOU LOSE!");
+        }
+        if (number == 2 && CPU == 0) {
+            System.out.println("The computer chose Rock. You chose Scissors. YOU LOSE!");
+        }
+        if (number == 2 && CPU == 1) {
+            System.out.println("The computer chose Paper. You chose Scissors. YOU WIN!");
+        }
+        if (number == 2 && CPU == 2) {
+            System.out.println("The computer chose Scissors. You chose Scissors. It is a draw!");
+        }
+    }
+
+}
